@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: HiltonMicroSwitch
+
+  datasource:
+    url: ${DB_URL}
+
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ks904125@gmail.com	
+    password: rttnyzqenvnfudhr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8080
+
+
+logging:
+  level:
+    root: INFO
+    com.hiltonMicroSwitch: DEBUG
+    
+  file:
+    name: logs/hilton-micro-switch.log
+    
+app:
+  cors:
+    allowed-origins: ${PORT:8080}
