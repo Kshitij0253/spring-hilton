@@ -1,0 +1,31 @@
+2026-02-15T12:13:31.539+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] c.h.HiltonMicroSwitchApplicationTests    : Starting HiltonMicroSwitchApplicationTests using Java 17.0.8.1 with PID 4848 (started by Kshitax in D:\RESTAPI\MicroServices\HiltonMicroSwitch)
+2026-02-15T12:13:31.540+05:30 DEBUG 4848 --- [HiltonMicroSwitch] [main] c.h.HiltonMicroSwitchApplicationTests    : Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-02-15T12:13:31.541+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] c.h.HiltonMicroSwitchApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T12:13:32.196+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T12:13:32.262+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2026-02-15T12:13:32.709+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-15T12:13:32.779+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-15T12:13:33.320+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-15T12:13:33.352+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-15T12:13:36.392+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e451790
+2026-02-15T12:13:36.394+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-15T12:13:38.393+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://dpg-d68m6msr85hc73cugv40-a.oregon-postgres.render.com:5432/hilton_db?sslmode=require]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: hilton_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-15T12:13:39.147+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-15T12:13:40.380+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-15T12:13:40.514+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-15T12:13:40.749+05:30  WARN 4848 --- [HiltonMicroSwitch] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-15T12:13:41.207+05:30  INFO 4848 --- [HiltonMicroSwitch] [main] c.h.HiltonMicroSwitchApplicationTests    : Started HiltonMicroSwitchApplicationTests in 10.03 seconds (process running for 11.295)
+2026-02-15T12:13:41.719+05:30  INFO 4848 --- [HiltonMicroSwitch] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-15T12:13:41.721+05:30  INFO 4848 --- [HiltonMicroSwitch] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-15T12:13:42.783+05:30  INFO 4848 --- [HiltonMicroSwitch] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
