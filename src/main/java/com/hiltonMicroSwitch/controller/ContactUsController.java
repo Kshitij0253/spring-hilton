@@ -23,6 +23,11 @@ public class ContactUsController {
 	@Autowired
     private ContactUsService contactUsService;
 
+	@GetMapping("/test")
+public String test() {
+    return "Backend working";
+}
+
     @PostMapping("/submit")
     public ResponseEntity<String> submitContact(@RequestBody ContactUsRequest request) {
     	
