@@ -14,10 +14,12 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-    	 registry.addMapping("/**")
-         .allowedOrigins(allowedOrigins.split(","))
-         .allowedMethods("*")
-         .allowedHeaders("*")
-         .allowCredentials(true);
+    	registry.addMapping("/**")
+                        .allowedOrigins(
+                            "https://hilton-theta.vercel.app"
+                        )
+                        .allowedMethods("*")
+                        .allowedHeaders("*")
+                        .allowCredentials(false);
     }
 }
