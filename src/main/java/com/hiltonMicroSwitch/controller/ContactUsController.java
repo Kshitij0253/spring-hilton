@@ -1,5 +1,10 @@
 package com.hiltonMicroSwitch.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +26,8 @@ public class ContactUsController {
 	 private static final Logger log =
 	            LoggerFactory.getLogger(ContactUsController.class);
 	
+	 private final ExecutorService executor = Executors.newFixedThreadPool(2);
+	 
 	@Autowired
     private ContactUsService contactUsService;
 
@@ -30,16 +37,26 @@ public String test() {
 }
 
     @PostMapping("/submit")
-    public ResponseEntity<String> submitContact(@RequestBody ContactUsRequest request) {
+    public ResponseEntity<Map<String, Object>> submitContact(@RequestBody ContactUsRequest request) {
     	
     	log.debug("Contact submit API called");
 
 
-        contactUsService.saveAndSend(request);
+//        contactUsService.saveAndSend(request);
+    	executor.submit(() -> {
+            try {
+            	contactUsService.saveAndSend(request);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    	
 
-        return ResponseEntity.ok(
-                "Thank you for contacting Hilton Micro Switch Co. We will get back to you shortly."
-        );
+    	 Map<String, Object> response = new HashMap<>();
+    	    response.put("success", true);
+    	    response.put("message", "Thank you for contacting Hilton Micro Switch Co. We will get back to you shortly.");
+
+    	    return ResponseEntity.ok(response);
     }
 
 }
