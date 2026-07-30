@@ -32,7 +32,7 @@ public class CorsConfig  {
 
                 registry.addMapping("/**")
                         .allowedOrigins(
-                            "https://hilton-theta.vercel.app"
+                            "https://hilton-micro.vercel.app"
                         )
                         .allowedMethods("*")
                         .allowedHeaders("*")
