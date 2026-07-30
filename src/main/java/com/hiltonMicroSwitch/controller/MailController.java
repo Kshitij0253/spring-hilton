@@ -25,11 +25,11 @@ public class MailController {
     public String sendMail(@RequestBody MailRequestDto dto) {
 
         executor.submit(() -> {
-	        try {
+	        // try {
 	             mailService.sendMail(dto);
-	            } catch (InterruptedException e) {
-	                Thread.currentThread().interrupt();
-	            }
+	            // } catch (InterruptedException e) {
+	                // Thread.currentThread().interrupt();
+	            // }
 
 	        });
         
